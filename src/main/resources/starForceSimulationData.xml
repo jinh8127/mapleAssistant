@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Update following maps if there is a change in star force success chances -->
+    <util:map id="starForceSuccessChanceMap" key-type="java.lang.Integer" value-type="java.lang.Double">
+        <entry key="0" value="95.00"/>
+        <entry key="1" value="90.00"/>
+        <entry key="2" value="85.00"/>
+        <entry key="3" value="85.00"/>
+        <entry key="4" value="80.00"/>
+        <entry key="5" value="75.00"/>
+        <entry key="6" value="70.00"/>
+        <entry key="7" value="65.00"/>
+        <entry key="8" value="60.00"/>
+        <entry key="9" value="55.00"/>
+        <entry key="10" value="50.00"/>
+        <entry key="11" value="45.00"/>
+        <entry key="12" value="40.00"/>
+        <entry key="13" value="35.00"/>
+        <entry key="14" value="30.00"/>
+        <entry key="15" value="30.00"/>
+        <entry key="16" value="30.00"/>
+        <entry key="17" value="30.00"/>
+        <entry key="18" value="30.00"/>
+        <entry key="19" value="30.00"/>
+        <entry key="20" value="30.00"/>
+        <entry key="21" value="30.00"/>
+        <entry key="22" value="3.00"/>
+        <entry key="23" value="2.00"/>
+        <entry key="24" value="1.00"/>
+    </util:map>
+
+    <util:map id="starForceDestroyChanceMap" key-type="java.lang.Integer" value-type="java.lang.Double">
+        <entry key="15" value="2.10"/>
+        <entry key="16" value="2.10"/>
+        <entry key="17" value="2.10"/>
+        <entry key="18" value="2.80"/>
+        <entry key="19" value="2.80"/>
+        <entry key="20" value="7.00"/>
+        <entry key="21" value="7.00"/>
+        <entry key="22" value="19.40"/>
+        <entry key="23" value="29.40"/>
+        <entry key="24" value="39.60"/>
+    </util:map>
+
+
+    <!-- Update this map if discount rate changes -->
+    <util:map id="starForceMvpDiscountMap" key-type="java.lang.String" value-type="java.lang.Double">
+        <entry key="BRONZE" value="0.00"/>
+        <entry key="SILVER" value="0.03"/>
+        <entry key="GOLD" value="0.05"/>
+        <entry key="DIAMOND" value="0.1"/>
+        <entry key="RED" value="0.1"/>
+    </util:map>
+
+</beans>

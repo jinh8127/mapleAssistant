@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <import resource="classpath:starForceSimulationData.xml"/>
+
+    <bean id="starForceSimulator" class="com.jin.mapleAssistant.mapleSimulator.simulationService.StarForceSimulator">
+        <constructor-arg index="0" ref="starForceSuccessChanceMap"/>
+        <constructor-arg index="1" ref="starForceDestroyChanceMap"/>
+        <constructor-arg index="2" ref="starForceMvpDiscountMap"/>
+    </bean>
+
+    <bean id="statisticsService" class="com.jin.mapleAssistant.mapleSimulator.statistic.StatisticsServiceImpl"/>
+
+    <bean id="starForceSimulationService" class="com.jin.mapleAssistant.mapleSimulator.simulationService.StarForceSimulationService">
+        <constructor-arg index="0" ref="starForceSimulator"/>
+        <constructor-arg index="1" ref="statisticsService"/>
+    </bean>
+
+</beans>
+
+
+
+
